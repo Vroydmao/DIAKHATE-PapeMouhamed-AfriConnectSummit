@@ -1215,11 +1215,13 @@ ul {
     box-shadow: var(--shadow-md);
 }
 
+
 .map-wrapper iframe {
     display: block;
     width: 100%;
     height: 450px;
 }
+
 
 /* ==========================================================================
    20. RESPONSIVE - PAGE CONTACT
