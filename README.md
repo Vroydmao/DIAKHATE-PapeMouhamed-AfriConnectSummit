@@ -4,7 +4,7 @@
 **Classe :** L1CS
 
 ## Description
-Site vitrine complet pour une conférence tech panafricaine fictive, développé dans le cadre de l'examen L1 Web.
+Site vitrine complet pour une conférence tech panafricaine fictive, développé dans le cadre de l'examen L1 Web du second semestre.
 
 ## Technologies utilisées
 - HTML5 sémantique
