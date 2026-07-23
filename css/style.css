@@ -933,3 +933,298 @@ ul {
         grid-template-columns: 1fr;
     }
 }
+/* ==========================================================================
+   16. PAGE INTERVENANTS - FILTRAGE
+   ========================================================================== */
+.speakers-page-section {
+    padding: 5rem 0;
+}
+
+.filters-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    padding: 0.7rem 1.5rem;
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Grille responsive : 3 colonnes desktop */
+.speakers-page-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* On réutilise le style des cartes déjà défini pour .speaker-card,
+   mais avec la classe .speaker-card-item utilisée par le JS de filtrage */
+.speaker-card-item {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-fast);
+}
+
+.speaker-card-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+}
+
+.speaker-card-item:hover .speaker-img {
+    transform: scale(1.05);
+}
+
+/* Responsive : 2 colonnes tablette, 1 colonne mobile */
+@media (max-width: 992px) {
+    .speakers-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .speakers-page-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========================================================================
+   17. SECTION CONTACT (Formulaire + Infos)
+   ========================================================================== */
+.contact-section {
+    padding: 5rem 0;
+}
+
+.contact-flex {
+    display: flex;
+    gap: 3rem;
+}
+
+.contact-form-wrapper,
+.contact-info-wrapper {
+    flex: 1;
+}
+
+.contact-form-wrapper h2,
+.contact-info-wrapper h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Champs du formulaire */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* États de validation (ajoutés par le JS) */
+.form-group input.valid,
+.form-group select.valid,
+.form-group textarea.valid {
+    border-color: #22c55e;
+}
+
+.form-group input.invalid,
+.form-group select.invalid,
+.form-group textarea.invalid {
+    border-color: #ef4444;
+}
+
+.error-message {
+    display: block;
+    color: #ef4444;
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+    min-height: 1rem;
+}
+
+.btn-full {
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Message de succès (caché par défaut) */
+.success-message {
+    display: none;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border: 1px solid #22c55e;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 600;
+}
+
+.success-message.show {
+    display: block;
+}
+
+/* Bloc infos pratiques */
+.info-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.8rem;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 0.2rem;
+}
+
+.info-item h4 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.info-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   18. FAQ - ACCORDÉON CSS PUR (sans JavaScript)
+   ========================================================================== */
+.faq-section {
+    padding: 5rem 0;
+    background-color: var(--card-bg);
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+/* On cache la case à cocher */
+.faq-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.faq-question {
+    display: block;
+    padding: 1.3rem 2rem 1.3rem 0;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    transition: color var(--transition-fast);
+}
+
+/* Petite flèche qui tourne */
+.faq-question::after {
+    content: '\002B'; /* signe + */
+    position: absolute;
+    right: 0;
+    top: 1.3rem;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    transition: transform var(--transition-fast);
+}
+
+.faq-question:hover {
+    color: var(--primary-color);
+}
+
+/* La réponse : hauteur 0 par défaut, cachée */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.faq-answer p {
+    padding-bottom: 1.3rem;
+    color: var(--text-muted);
+}
+
+/* LA RÈGLE CLÉ : quand la checkbox est cochée, on ouvre la réponse */
+.faq-toggle:checked ~ .faq-answer {
+    max-height: 300px;
+}
+
+.faq-toggle:checked ~ .faq-question::after {
+    content: '\2212'; /* signe - */
+    transform: rotate(180deg);
+}
+
+/* ==========================================================================
+   19. CARTE GOOGLE MAPS
+   ========================================================================== */
+.map-section {
+    padding: 5rem 0;
+}
+
+.map-wrapper {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.map-wrapper iframe {
+    display: block;
+    width: 100%;
+}
+
+/* ==========================================================================
+   20. RESPONSIVE - PAGE CONTACT
+   ========================================================================== */
+@media (max-width: 768px) {
+    .contact-flex {
+        flex-direction: column;
+    }
+}

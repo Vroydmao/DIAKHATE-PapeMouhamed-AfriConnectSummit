@@ -246,4 +246,106 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-});
+});/* ----------------------------------------------------------------------
+       10. VALIDATION DU FORMULAIRE D'INSCRIPTION (Pour contact.html)
+       ---------------------------------------------------------------------- */
+    const registrationForm = document.getElementById('registrationForm');
+
+    if (registrationForm) {
+
+        registrationForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // On empêche l'envoi/rechargement de la page
+
+            let isFormValid = true;
+
+            // --- Nom complet ---
+            const fullname = document.getElementById('fullname');
+            if (fullname.value.trim() === '') {
+                showError(fullname, 'Le nom complet est requis.');
+                isFormValid = false;
+            } else {
+                showSuccess(fullname);
+            }
+
+            // --- Email (regex) ---
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value.trim())) {
+                showError(email, 'Veuillez entrer un email valide.');
+                isFormValid = false;
+            } else {
+                showSuccess(email);
+            }
+
+            // --- Téléphone (minimum 8 chiffres) ---
+            const phone = document.getElementById('phone');
+            const phoneDigits = phone.value.replace(/\D/g, ''); // on garde uniquement les chiffres
+            if (phoneDigits.length < 8) {
+                showError(phone, 'Le numéro doit contenir au moins 8 chiffres.');
+                isFormValid = false;
+            } else {
+                showSuccess(phone);
+            }
+
+            // --- Type de participation ---
+            const participation = document.getElementById('participation');
+            if (participation.value === '') {
+                showError(participation, 'Veuillez choisir un type de participation.');
+                isFormValid = false;
+            } else {
+                showSuccess(participation);
+            }
+
+            // --- Pays ---
+            const country = document.getElementById('country');
+            if (country.value === '') {
+                showError(country, 'Veuillez choisir votre pays.');
+                isFormValid = false;
+            } else {
+                showSuccess(country);
+            }
+
+            // --- Message (minimum 20 caractères) ---
+            const message = document.getElementById('message');
+            if (message.value.trim().length < 20) {
+                showError(message, 'Le message doit contenir au moins 20 caractères.');
+                isFormValid = false;
+            } else {
+                showSuccess(message);
+            }
+
+            // --- Si tout est valide ---
+            if (isFormValid) {
+                const successMessage = document.getElementById('successMessage');
+                successMessage.classList.add('show');
+
+                registrationForm.reset(); // Réinitialise le formulaire
+
+                // On enlève les classes valid/invalid après reset
+                registrationForm.querySelectorAll('.valid, .invalid').forEach(field => {
+                    field.classList.remove('valid', 'invalid');
+                });
+
+                // On masque le message de succès après 4 secondes
+                setTimeout(() => {
+                    successMessage.classList.remove('show');
+                }, 4000);
+            }
+        });
+
+        // Fonction pour afficher une erreur sur un champ
+        function showError(field, message) {
+            field.classList.remove('valid');
+            field.classList.add('invalid');
+            const errorSpan = field.parentElement.querySelector('.error-message');
+            if (errorSpan) errorSpan.textContent = message;
+        }
+
+        // Fonction pour marquer un champ comme valide
+        function showSuccess(field) {
+            field.classList.remove('invalid');
+            field.classList.add('valid');
+            const errorSpan = field.parentElement.querySelector('.error-message');
+            if (errorSpan) errorSpan.textContent = '';
+        }
+    }
