@@ -1,7 +1,7 @@
 # AfriConnect Summit 2026
 
 **Auteur :** Pape Mouhamed Diakhaté
-**Classe :** [ta classe]
+**Classe :** L1CS
 
 ## Description
 Site vitrine complet pour une conférence tech panafricaine fictive, développé dans le cadre de l'examen L1 Web.
