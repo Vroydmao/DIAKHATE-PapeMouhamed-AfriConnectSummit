@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AfriConnect Summit 2026 - Le sommet tech majeur en Afrique francophone réunissant développeurs, entrepreneurs et investisseurs.">
+    <title>Accueil | AfriConnect Summit 2026</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Feuille de style unique -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- EN-TÊTE & NAVIGATION                       -->
+    <!-- ========================================== -->
+    <header class="header">
+        <nav class="navbar" aria-label="Navigation principale">
+            <a href="index.html" class="logo">
+                <span class="logo-accent">AfriConnect</span> Summit '26
+            </a>
+
+            <!-- Liens de navigation -->
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Accueil</a></li>
+                <li class="nav-item"><a href="programme.html" class="nav-link">Programme</a></li>
+                <li class="nav-item"><a href="intervenants.html" class="nav-link">Intervenants</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact & Inscription</a></li>
+            </ul>
+
+            <!-- Actions Navbar -->
+            <div class="nav-actions">
+                <!-- Toggle Dark Mode -->
+                <button id="themeToggle" class="theme-toggle" aria-label="Basculer entre mode sombre et clair">
+                    <i class="bi bi-moon-fill" id="themeIcon"></i>
+                </button>
+
+                <!-- Bouton Hamburger (Mobile) -->
+                <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- CONTENU PRINCIPAL                          -->
+    <!-- ========================================== -->
+    <main>
+
+        <!-- SECTION HERO -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content fade-in">
+                    <span class="badge">Le Rendez-vous Tech Panafricain</span>
+                    <h1>Inspirer, Innover, Impact : L'Avenir Tech de l'Afrique</h1>
+                    <p class="hero-subtitle">
+                        <i class="bi bi-geo-alt-fill"></i> Dakar, Sénégal &nbsp;|&nbsp; 
+                        <i class="bi bi-calendar-event-fill"></i> 15 - 17 Novembre 2026
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn btn-primary">Réserver ma place</a>
+                        <a href="programme.html" class="btn btn-secondary">Voir le programme</a>
+                    </div>
+                </div>
+
+                <!-- Compte à rebours temps réel -->
+                <div class="countdown-container fade-in">
+                    <h2 class="sr-only">Compte à rebours avant l'événement</h2>
+                    <div class="countdown-grid">
+                        <div class="countdown-box">
+                            <span id="days" class="countdown-value">00</span>
+                            <span class="countdown-label">Jours</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span id="hours" class="countdown-value">00</span>
+                            <span class="countdown-label">Heures</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span id="minutes" class="countdown-value">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span id="seconds" class="countdown-value">00</span>
+                            <span class="countdown-label">Secondes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION CHIFFRES CLÉS -->
+        <section class="stats-section">
+            <div class="container">
+                <h2 class="section-title text-center">L'Événement en Chiffres</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="bi bi-people-fill stat-icon"></i>
+                        <span class="stat-number" data-target="1200">0</span>
+                        <p class="stat-label">Participants attendus</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="bi bi-mic-fill stat-icon"></i>
+                        <span class="stat-number" data-target="48">0</span>
+                        <p class="stat-label">Intervenants experts</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="bi bi-calendar3 stat-icon"></i>
+                        <span class="stat-number" data-target="3">0</span>
+                        <p class="stat-label">Jours d'échanges</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="bi bi-globe-africa-africa stat-icon"></i>
+                        <span class="stat-number" data-target="12">0</span>
+                        <p class="stat-label">Pays représentés</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION POURQUOI PARTICIPER -->
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title text-center">Pourquoi Participer ?</h2>
+                <div class="features-flex">
+                    <article class="feature-card fade-in-scroll">
+                        <div class="feature-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+                        <h3>Conférences d'Élite</h3>
+                        <p>Assistez aux keynotes animées par les pionniers de la tech africaine et découvrez les innovations technologiques majeures du continent.</p>
+                    </article>
+                    <article class="feature-card fade-in-scroll">
+                        <div class="feature-icon"><i class="bi bi-diagram-3-fill"></i></div>
+                        <h3>Networking Stratégique</h3>
+                        <p>Échangez directement avec des investisseurs, fondateurs de startups et recruteurs issus de plus de 12 pays africains.</p>
+                    </article>
+                    <article class="feature-card fade-in-scroll">
+                        <div class="feature-icon"><i class="bi bi-cpu-fill"></i></div>
+                        <h3>Ateliers Pratiques</h3>
+                        <p>Participez à des workshops interactifs sur l'intelligence artificielle, la cybersécurité, la FinTech et le Cloud Computing.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION INTERVENANTS VEDETTES -->
+        <section class="speakers-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Intervenants Vedettes</h2>
+                    <a href="intervenants.html" class="btn btn-outline">Voir tous les intervenants <i class="bi bi-arrow-right"></i></a>
+                </div>
+                <div class="speakers-grid">
+                    <article class="speaker-card">
+                        <div class="speaker-img-wrapper">
+                            <img src="images/speaker1.jpg" alt="Photo de Amina Diop" class="speaker-img" loading="lazy">
+                        </div>
+                        <div class="speaker-info">
+                            <h3 class="speaker-name">Amina Diop</h3>
+                            <p class="speaker-role">VP Artificial Intelligence, TechAfrica</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</p>
+                        </div>
+                    </article>
+
+                    <article class="speaker-card">
+                        <div class="speaker-img-wrapper">
+                            <img src="images/speaker2.jpg" alt="Photo de Kwame Osei" class="speaker-img" loading="lazy">
+                        </div>
+                        <div class="speaker-info">
+                            <h3 class="speaker-name">Kwame Osei</h3>
+                            <p class="speaker-role">Fondateur & CEO, PayFlow</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Ghana</p>
+                        </div>
+                    </article>
+
+                    <article class="speaker-card">
+                        <div class="speaker-img-wrapper">
+                            <img src="images/speaker3.jpg" alt="Photo de Fatou Traoré" class="speaker-img" loading="lazy">
+                        </div>
+                        <div class="speaker-info">
+                            <h3 class="speaker-name">Fatou Traoré</h3>
+                            <p class="speaker-role">Lead Data Scientist, AfriData Labs</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Côte d'Ivoire</p>
+                        </div>
+                    </article>
+
+                    <article class="speaker-card">
+                        <div class="speaker-img-wrapper">
+                            <img src="images/speaker4.jpg" alt="Photo de Marc Ndombé" class="speaker-img" loading="lazy">
+                        </div>
+                        <div class="speaker-info">
+                            <h3 class="speaker-name">Marc Ndombé</h3>
+                            <p class="speaker-role">Directeur Cybersécurité, SecureCloud</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Cameroun</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION SPONSORS -->
+        <section class="sponsors-section">
+            <div class="container text-center">
+                <h2 class="section-title">Nos Partenaires & Sponsors</h2>
+                
+                <!-- Niveau Or -->
+                <div class="sponsor-tier sponsor-gold">
+                    <h3 class="tier-title">Sponsors Or</h3>
+                    <div class="sponsors-flex">
+                        <div class="sponsor-logo">TechCorp Global</div>
+                        <div class="sponsor-logo">AfriBank Digital</div>
+                    </div>
+                </div>
+
+                <!-- Niveau Argent -->
+                <div class="sponsor-tier sponsor-silver">
+                    <h3 class="tier-title">Sponsors Argent</h3>
+                    <div class="sponsors-flex">
+                        <div class="sponsor-logo">CloudAfrica</div>
+                        <div class="sponsor-logo">InnoVentures</div>
+                        <div class="sponsor-logo">DevHub Alliance</div>
+                    </div>
+                </div>
+
+                <!-- Niveau Bronze -->
+                <div class="sponsor-tier sponsor-bronze">
+                    <h3 class="tier-title">Sponsors Bronze</h3>
+                    <div class="sponsors-flex">
+                        <div class="sponsor-logo">StartUp Pulse</div>
+                        <div class="sponsor-logo">DataFlow Inc</div>
+                        <div class="sponsor-logo">CyberShield</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================== -->
+    <!-- PIED DE PAGE (FOOTER)                     -->
+    <!-- ========================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-flex">
+                <!-- Colonne 1 : À propos -->
+                <div class="footer-col">
+                    <span class="logo-accent">AfriConnect</span> Summit
+                    <p class="footer-desc">Le premier rassemblement technologique panafricain pour façonner le monde numérique de demain.</p>
+                </div>
+
+                <!-- Colonne 2 : Liens rapides -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="programme.html">Programme</a></li>
+                        <li><a href="intervenants.html">Intervenants</a></li>
+                        <li><a href="contact.html">Contact & Inscription</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonne 3 : Réseaux & Contact -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="https://linkedin.com" target="_blank" aria-label="Suivez-nous sur LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Suivez-nous sur Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://youtube.com" target="_blank" aria-label="Suivez-nous sur YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="https://github.com" target="_blank" aria-label="Suivez-nous sur GitHub"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> AfriConnect Summit. Tous droits réservés.</p>
+                <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Retourner en haut de la page">
+                    <i class="bi bi-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fichier JavaScript Vanilla -->
+    <script src="js/main.js"></script>
+</body>
+</html>
